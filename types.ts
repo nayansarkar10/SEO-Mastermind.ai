@@ -1,0 +1,22 @@
+export enum AppView {
+  DASHBOARD = 'DASHBOARD',
+  KEYWORD_RESEARCH = 'KEYWORD_RESEARCH',
+  CONTENT_OPTIMIZER = 'CONTENT_OPTIMIZER',
+  META_GENERATOR = 'META_GENERATOR',
+  CONSULTANT_CHAT = 'CONSULTANT_CHAT'
+}
+
+export interface ChatMessage {
+  id: string;
+  role: 'user' | 'model';
+  text: string;
+  timestamp: number;
+  isError?: boolean;
+}
+
+export interface GroundingChunk {
+  web?: {
+    uri: string;
+    title: string;
+  };
+}
