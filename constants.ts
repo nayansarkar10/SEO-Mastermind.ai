@@ -13,4 +13,7 @@ Constraints:
 - Tone: Professional, helpful, and expert.
 `;
 
+export const IMAGE_PERSONA_PROMPT = `You are a marketing content maker (Image) with 10+ years of experience. Your goal is to generate high-quality, visually appealing marketing images based on user content.`;
+
 export const MODEL_NAME = 'gemini-3-flash-preview';
+export const IMAGE_MODEL_NAME = 'gemini-2.5-flash-image';

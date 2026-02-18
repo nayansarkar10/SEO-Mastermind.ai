@@ -3,9 +3,10 @@ import Layout from './components/Layout';
 import KeywordResearch from './features/KeywordResearch';
 import ContentOptimizer from './features/ContentOptimizer';
 import MetaDataGenerator from './features/MetaDataGenerator';
+import ImageGenerator from './features/ImageGenerator';
 import SEOChat from './features/SEOChat';
 import { AppView } from './types';
-import { TrendingUp, Users, Target, Activity } from 'lucide-react';
+import { TrendingUp, Users, Target, Activity, Image as ImageIcon } from 'lucide-react';
 
 const Dashboard: React.FC<{ onViewChange: (view: AppView) => void }> = ({ onViewChange }) => {
   return (
@@ -53,6 +54,18 @@ const Dashboard: React.FC<{ onViewChange: (view: AppView) => void }> = ({ onView
           <h3 className="text-xl font-bold text-slate-800 mb-2">Meta Generator</h3>
           <p className="text-slate-500">Create perfectly sized meta titles and descriptions with SERP previews.</p>
         </div>
+
+        {/* Card 4 - New Image Generator */}
+        <div 
+          onClick={() => onViewChange(AppView.IMAGE_GENERATOR)}
+          className="group bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md hover:border-brand-300 transition-all cursor-pointer"
+        >
+          <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-pink-500 transition-colors">
+            <ImageIcon className="w-6 h-6 text-pink-600 group-hover:text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-slate-800 mb-2">Image Generator</h3>
+          <p className="text-slate-500">Create and refine high-quality marketing visuals using AI.</p>
+        </div>
       </div>
       
       <div className="bg-gradient-to-r from-brand-600 to-indigo-700 rounded-2xl p-8 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
@@ -83,6 +96,8 @@ const App: React.FC = () => {
         return <ContentOptimizer />;
       case AppView.META_GENERATOR:
         return <MetaDataGenerator />;
+      case AppView.IMAGE_GENERATOR:
+        return <ImageGenerator />;
       case AppView.CONSULTANT_CHAT:
         return <SEOChat />;
       case AppView.DASHBOARD:

@@ -76,7 +76,7 @@ const MetaDataGenerator: React.FC = () => {
               value={content}
               onChange={(e) => setContent(e.target.value)}
               placeholder="Paste your page content or a summary here..."
-              className="w-full h-32 p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all resize-y"
+              className="w-full h-32 p-3 rounded-lg border border-slate-600 bg-slate-800 text-white placeholder-slate-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all resize-y"
             />
           </div>
           <button

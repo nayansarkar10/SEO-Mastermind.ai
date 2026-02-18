@@ -8,7 +8,8 @@ import {
   MessageSquareText, 
   Menu,
   X,
-  TrendingUp
+  TrendingUp,
+  Image as ImageIcon
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -25,6 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onViewChange, children }) 
     { id: AppView.KEYWORD_RESEARCH, label: 'Keyword Research', icon: Search },
     { id: AppView.CONTENT_OPTIMIZER, label: 'Content Optimizer', icon: FileText },
     { id: AppView.META_GENERATOR, label: 'Meta Generator', icon: Tags },
+    { id: AppView.IMAGE_GENERATOR, label: 'Image Generator', icon: ImageIcon },
     { id: AppView.CONSULTANT_CHAT, label: 'SEO Consultant', icon: MessageSquareText },
   ];
 
