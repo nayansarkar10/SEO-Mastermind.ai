@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AppView } from '../types';
+import NewsTicker from './NewsTicker';
 import { 
   LayoutDashboard, 
   Search, 
@@ -106,6 +107,10 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onViewChange, children }) 
         {/* Scrollable Content Area */}
         <main className="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-50">
           <div className="max-w-5xl mx-auto h-full">
+            {/* News Ticker Section */}
+            <NewsTicker />
+            
+            {/* Page Content */}
             {children}
           </div>
         </main>

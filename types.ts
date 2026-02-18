@@ -21,3 +21,12 @@ export interface GroundingChunk {
     title: string;
   };
 }
+
+export interface NewsItem {
+  title: string;
+  summary: string;
+  url: string;
+  source: string;
+  date: string;
+  author?: string;
+}
